@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+
+    # Exclude partial listing of files
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Sending all requests to the Front Controller
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+    LimitRequestBody 1024
+</IfModule>
