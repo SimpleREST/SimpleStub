@@ -1,0 +1,4 @@
+# RU: Для заглушки, логично запретить индексирование содержимого ресурса, по желанию можно исправить потом.
+# EN: For a stub, it is logical to prohibit indexing of the content of the resource, if desired, you can fix it later.
+User-agent: *
+Disallow:
