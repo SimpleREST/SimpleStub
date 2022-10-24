@@ -1,29 +1,36 @@
 {
-    "name": "simplerest/simplestub",
-    "description": "A simple stub for the site",
-    "type": "project",
-    "license": "MIT",
-    "homepage": "https://simplerest.ru",
-    "support": {
-        "issues": "https://github.com/simplerest/simplestub/issues",
-        "source": "https://github.com/simplerest/simplestub"
-    },
-    "authors": [
-        {
-            "name": "Dmitriy Veremeenko",
-            "email": "stdimensiy@yandex.ru"
-        }
-    ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/simplerest/simplestub"
-        }
-    ],
-    "config": {
-        "sort-packages": true
-    },
-    "require": {},
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "simplerest/simplestub",
+  "description": "A simple stub for the site",
+  "type": "project",
+  "license": "MIT",
+  "homepage": "https://simplerest.ru",
+  "support": {
+    "issues": "https://github.com/simplerest/simplestub/issues",
+    "source": "https://github.com/simplerest/simplestub"
+  },
+  "authors": [
+    {
+      "name": "Dmitriy Veremeenko",
+      "email": "stdimensiy@yandex.ru"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/simplerest/simplestub"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "boiler/"
+    }
+  },
+  "require": {
+    "ext-intl": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

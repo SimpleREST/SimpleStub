@@ -1,3 +1,11 @@
+<?php
+
+use App\Stub;
+
+require __DIR__ . '/../vendor/autoload.php';
+//require_once __DIR__ .'/../boiler/Stub.php';
+$app = new Stub();
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -6,6 +14,9 @@
     <meta charset="utf-8">
 </head>
 <body>
+<p><?php echo $app->version() ?></p>
+<p><?php echo Stub::VERSION ?></p>
+<p><?php $app->printOutVersion(); ?></p>
 <p>Разум — это Будда, а прекращение умозрительного мышления — это путь.
     Перестав мыслить понятиями и размышлять о путях существования и небытия,
     о душе и плоти, о пассивном и активном и о других подобных вещах,
