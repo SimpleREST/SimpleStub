@@ -1,4 +1,5 @@
 <?php
+
 namespace App;
 
 class Stub implements Application
@@ -10,19 +11,27 @@ class Stub implements Application
      */
     const VERSION = '0.0.1';
 
+    private $params = [];
+
+    public function __construct()
+    {
+        $this->params = include_once('./../config/config.php');
+    }
+
     /**
-     * Get the version number of the application.
+     * Gets the value of the configuration parameter.
      *
-     * @return string
+     * @param string $key
+     * @param mixed $default
+     * @return mixed
      */
+    function get($key, $default = null)
+    {
+        return $this->params[$key] ?: $default;
+    }
+
     public function version()
     {
         return static::VERSION;
     }
-
-    public function printOutVersion()
-    {
-        echo static::VERSION;
-    }
-
 }

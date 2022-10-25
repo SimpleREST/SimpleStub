@@ -15,6 +15,9 @@ $app = new Stub();
 </head>
 <body>
 <p><?php echo $app->version() ?></p>
+<p><?php echo $app->get('base_lang') ?></p>
+<p><?php echo $app->get('base_lang', 'RU') ?></p>
+<p><?php echo $app->get('base_lang1', 'RU') ?></p>
 <p><?php echo Stub::VERSION ?></p>
 <p><?php $app->printOutVersion(); ?></p>
 <p>Разум — это Будда, а прекращение умозрительного мышления — это путь.
