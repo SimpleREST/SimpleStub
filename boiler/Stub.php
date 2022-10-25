@@ -11,7 +11,11 @@ class Stub implements Application
      */
     const VERSION = '0.0.1';
 
-    private $params = [];
+    /**
+     * Массив конфигурационных параметров заглушки
+     * @var array $params [mixed]
+     */
+    private $params;
 
     public function __construct()
     {

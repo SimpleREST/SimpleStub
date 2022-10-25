@@ -10,6 +10,8 @@
 return [
     'base_lang' => 'ru',
     'base_charset' => 'utf-8',
+    'base_description' => 'SimpleStub - Сайт находится в стадии разработки',
+    'base_keywords' => 'SimpleStub - Website in development',
 
     /**
      * Секция управления блоком обратного отсчета
