@@ -9,8 +9,9 @@ $app = new Stub();
 <!DOCTYPE html>
 <html lang="<?php echo $app->get('base_lang', 'en') ?>">
 <head>
-    <title>Simple stub - The site is in the process of being created.</title>
+    <title><?php echo $app->get('base_title', 'Website in development') ?></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="<?php echo $app->get('base_charset', 'utf-8') ?>">
     <meta content="<?php echo $app->get('base_description', 'SimpleStub') ?>" name="description">
     <meta content="<?php echo $app->get('base_keywords', 'SimpleStub') ?>" name="keywords">
