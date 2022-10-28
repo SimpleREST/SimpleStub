@@ -29,8 +29,14 @@
     }
   },
   "require": {
-    "ext-intl": "*",
-    "simplerest/icofont": "^1.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "composer install --working-dir public/"
+    ],
+    "pre-install-cmd": [
+      "composer install --working-dir public/"
+    ]
   },
   "minimum-stability": "dev",
   "prefer-stable": true

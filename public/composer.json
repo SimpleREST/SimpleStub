@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twbs/bootstrap": "4.4.1",
+        "simplerest/icofont": "^1.0"
+    }
+}
