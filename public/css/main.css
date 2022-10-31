@@ -1,9 +1,95 @@
 /*
-Основной файл стилей для заглушки: SimplePlug v.0.0.0
+Основной файл стилей для заглушки: SimplePlug v.0.0.1
 URL: https://github.com/SimpleREST/SimpleStub
 License: https://github.com/SimpleREST/SimpleStub/blob/master/LICENSE
 */
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444;
+}
 
+a {
+    color: #4f92af;
+}
+
+a:hover {
+    color: #5eb8df;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .font-primary {
+    font-family: "Raleway", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    height: 80px;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+#header .logo h1 {
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+#header .logo h1 a, #header .logo h1 a:hover {
+    color: #f1f;
+    text-decoration: none;
+}
+
+#header .logo img {
+    padding: 0;
+    margin: 0;
+    max-height: 40px;
+}
+
+#header .contact-link a {
+    color: #ff6600;
+    padding-right: 10px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#header .contact-link a:hover {
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+    background: #0d182d;
+    padding: 30px 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+#footer .copyright {
+    text-align: center;
+}
+
+#footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+}
+
+#footer .credits a {
+    color: #72a8bf;
+}
 
 
 

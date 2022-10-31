@@ -6,3 +6,14 @@
  * содержит только уникальные скрипты предназначенные для конкретной заглушки (нет смысла в отдельную
  * зависимость запихивать... пока.
  */
+(function() {
+    'use strict';
+
+    if ($('.countdown').length) {
+        var count = $('.countdown').data('count');
+        var template = $('.countdown').data('template');
+        $('.countdown').countdown(count, function(event) {
+            $(this).html(event.strftime(template));
+        });
+    }
+})(jQuery)

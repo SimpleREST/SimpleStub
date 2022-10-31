@@ -20,17 +20,42 @@ $app = new Stub();
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    !-- Template Main CSS File -->
+    <!-- Template Main CSS File -->
     <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-<p><?php echo $app->version() ?></p>
-<p>Разум — это Будда, а прекращение умозрительного мышления — это путь.
-    Перестав мыслить понятиями и размышлять о путях существования и небытия,
-    о душе и плоти, о пассивном и активном и о других подобных вещах,
-    начинаешь осознавать, что разум — это Будда,
-    что Будда — это сущность разума,
-    и что разум подобен бесконечности.</p>
+<!-- ======= Header ======= -->
+<header id="header">
+    <div class="container-fluid">
+        <div class="logo float-left">
+            <h1 class="text-light"><a href="index.php"><span><?php echo $app->get('base_title', 'SimpleStub').$app->version() ?></span></a>
+            </h1>
+        </div>
+        <div class="contact-link float-right">
+            <a href="#contact" class="scrollto">Связаться с нами</a>
+        </div>
+    </div>
+</header><!-- End #header -->
+<nav></nav>
+<div class="row">
+    <!-- ======= Base Stub Section ======= -->
+    <section id="stub">
+        <div class="hero-container">
+            <BR><BR>
+            <h1>We Build Simple REST</h1>
+            <h2><?php echo $app->get('base_note', 'SimpleStub / We Build').$app->version() ?></h2>
+            <div class="countdown" data-count="2022/11/30"
+                 data-template="до старта сайта <BR> %w недель %d дней <br> %H:%M:%S"></div>
+
+
+        </div>
+    </section><!-- End Base Stub section -->
+</div>
+<footer></footer>
+
+<!-- Vendor JS Files -->
+<script src="vendor/components/jquery/jquery.min.js"></script>
+
 <!-- Template Main JS File -->
 <script src="js/main.js"></script>
 </body>
