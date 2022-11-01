@@ -12,8 +12,7 @@
     if ($('.countdown').length) {
         var count = $('.countdown').data('count');
         var template = $('.countdown').data('template');
-        $('.countdown').countdown(count, function(event) {
-            $(this).html(event.strftime(template));
-        });
+        var asssa = document.getElementById("asssa");
+        asssa.innerHTML = count + "    " + template;
     }
-})(jQuery)
+})()

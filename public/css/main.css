@@ -67,6 +67,343 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#stub {
+    width: 100%;
+    height: 100vh;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    margin-top: -80px;
+    z-index: 9;
+    /* countdown */
+}
+
+#stub .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#stub h1 {
+    margin: 0 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#stub h2 {
+    color: #eee;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+#stub .countdown {
+    font-size: 48px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 56px;
+    margin: 10px 0 60px 0;
+}
+
+#stub .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#stub .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#stub .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+#stub .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+#stub .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading-notify 1s linear infinite;
+    animation: animate-loading-notify 1s linear infinite;
+}
+
+@-webkit-keyframes animate-loading-notify {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading-notify {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#stub .php-email-form input {
+    border-radius: 3px;
+    box-shadow: none;
+    font-size: 14px;
+    border: 0;
+    padding: 0px 15px 2px 15px;
+    width: 250px;
+    height: 40px;
+    margin: 0 8px;
+}
+
+#stub .php-email-form button[type="submit"] {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 7px 30px;
+    border-radius: 3px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #4f92af;
+    color: #fff;
+    background: #4f92af;
+}
+
+#stub .php-email-form button[type="submit"]:hover {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+@media (min-width: 1024px) {
+    #stub {
+        background-attachment: fixed;
+    }
+}
+
+@media (max-width: 768px) {
+    #stub h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    #stub h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    #stub .php-email-form input {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 575px) {
+    #stub .countdown {
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+}
+
+.section-bg {
+    background-color: #f7fafc;
+}
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+.contact .contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact .contact-info i {
+    font-size: 48px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #4f92af;
+}
+
+.contact .contact-info address, .contact .contact-info p {
+    margin-bottom: 0;
+    color: #444;
+}
+
+.contact .contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    color: #999;
+}
+
+.contact .contact-info a {
+    color: #000;
+}
+
+.contact .contact-info a:hover {
+    color: #4f92af;
+}
+
+.contact .contact-address, .contact .contact-phone, .contact .contact-email {
+    margin-bottom: 20px;
+}
+
+.contact .php-email-form .validate {
+    display: none;
+    color: red;
+    margin: 0 0 15px 0;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
+    border-color: #4f92af;
+}
+
+.contact .php-email-form button[type="submit"] {
+    background: #4f92af;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+    background: #72a8bf;
+}
+
+@-webkit-keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 768px) {
+    .contact .contact-phone {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+    .contact .contact-address, .contact .contact-phone, .contact .contact-email {
+        padding: 20px 0;
+    }
+}
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {

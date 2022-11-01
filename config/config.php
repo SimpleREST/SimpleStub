@@ -23,6 +23,7 @@ return [
     /**
      * Секция управления блоком основного контента заглушки
      */
+    'base_background' => 'simpleplug-base-bg.jpg',
     'base_title' => 'Website in development',
     'base_note' => 'The service is under development. Soon we will open it to everyone.',
 

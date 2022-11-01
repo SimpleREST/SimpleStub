@@ -28,7 +28,8 @@ $app = new Stub();
 <header id="header">
     <div class="container-fluid">
         <div class="logo float-left">
-            <h1 class="text-light"><a href="index.php"><span><?php echo $app->get('base_title', 'SimpleStub').$app->version() ?></span></a>
+            <h1 class="text-light"><a
+                        href="index.php"><span><?php echo $app->get('base_title', 'SimpleStub') . $app->version() ?></span></a>
             </h1>
         </div>
         <div class="contact-link float-right">
@@ -37,14 +38,15 @@ $app = new Stub();
     </div>
 </header><!-- End #header -->
 <nav></nav>
-<div class="row">
+<div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
     <!-- ======= Base Stub Section ======= -->
-    <section id="stub">
+    <section id="stub"
+             style="background-image: url('img/<?php echo $app->get('base_background', 'simpleplug-base-bg.jpg') ?>');">
         <div class="hero-container">
             <BR><BR>
             <h1>We Build Simple REST</h1>
-            <h2><?php echo $app->get('base_note', 'SimpleStub / We Build').$app->version() ?></h2>
-            <div class="countdown" data-count="2022/11/30"
+            <h2><?php echo $app->get('base_note', 'SimpleStub / We Build') . $app->version() ?></h2>
+            <div id = "asssa" class="countdown" data-count="2022/11/30"
                  data-template="до старта сайта <BR> %w недель %d дней <br> %H:%M:%S"></div>
 
 
