@@ -18,8 +18,10 @@
 
     const a = $('.countdown-timer');
     if (a) {
-        const count = a.dataset.count;
-        const pattern = a.dataset.pattern;
+        let count = a.dataset.count;
+        if (!count) count = "Отсутствует финальное значение таймера обратного отсчета";
+        let pattern = a.dataset.pattern;
+        if (!pattern) pattern = "Шаблон вывода значения таймера не задан"
         a.innerHTML = count + "    " + pattern;
     }
 })()
