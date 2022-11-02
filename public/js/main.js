@@ -1,5 +1,5 @@
 /**
- * Основной файл Js для заглушки: SimplePlug v.0.0.0
+ * Основной файл JS для заглушки: SimplePlug v.0.0.1
  * URL: https://github.com/SimpleREST/SimpleStub
  * License: https://github.com/SimpleREST/SimpleStub/blob/master/LICENSE
  *
@@ -10,14 +10,16 @@
     'use strict';
 
     function $(x) {
-        return document.getElementById(x);
+        const elem = document.querySelectorAll(x);
+        document.writeln(elem.length.toString())
+        return elem.item(0);
+
     }
 
-    var a = $('countdown');
+    const a = $('.countdown-timer');
     if (a) {
-        var count = a.getAttribute('data-count')
-        var pattern = a.getAttribute('data-pattern')
+        const count = a.dataset.count;
+        const pattern = a.dataset.pattern;
         a.innerHTML = count + "    " + pattern;
     }
-    // a.innerHTML = "<p>Привет!</p>";
 })()

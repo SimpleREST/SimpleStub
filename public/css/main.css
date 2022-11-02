@@ -109,7 +109,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     font-size: 24px;
 }
 
-#stub .countdown {
+#stub .countdown-timer {
     font-size: 48px;
     font-weight: 300;
     color: #fff;
@@ -235,7 +235,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 @media (max-width: 575px) {
-    #stub .countdown {
+    #stub .countdown-timer {
         font-size: 32px;
         line-height: 38px;
     }
