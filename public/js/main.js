@@ -6,13 +6,18 @@
  * содержит только уникальные скрипты предназначенные для конкретной заглушки (нет смысла в отдельную
  * зависимость запихивать... пока.
  */
-(function() {
+(function () {
     'use strict';
 
-    if ($('.countdown').length) {
-        var count = $('.countdown').data('count');
-        var template = $('.countdown').data('template');
-        var asssa = document.getElementById("asssa");
-        asssa.innerHTML = count + "    " + template;
+    function $(x) {
+        return document.getElementById(x);
     }
+
+    var a = $('countdown');
+    if (a) {
+        var count = a.getAttribute('data-count')
+        var pattern = a.getAttribute('data-pattern')
+        a.innerHTML = count + "    " + pattern;
+    }
+    // a.innerHTML = "<p>Привет!</p>";
 })()

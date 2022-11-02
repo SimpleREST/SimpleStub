@@ -46,17 +46,15 @@ $app = new Stub();
             <BR><BR>
             <h1>We Build Simple REST</h1>
             <h2><?php echo $app->get('base_note', 'SimpleStub / We Build') . $app->version() ?></h2>
-            <div id = "asssa" class="countdown" data-count="2022/11/30"
-                 data-template="до старта сайта <BR> %w недель %d дней <br> %H:%M:%S"></div>
-
-
+            <div id = "countdown" class="countdown" data-count="2022/11/30"
+                 data-pattern="до старта сайта <BR> %w недель %d дней <br> %H:%M:%S"></div>
         </div>
     </section><!-- End Base Stub section -->
 </div>
 <footer></footer>
 
 <!-- Vendor JS Files -->
-<script src="vendor/components/jquery/jquery.min.js"></script>
+
 
 <!-- Template Main JS File -->
 <script src="js/main.js"></script>
