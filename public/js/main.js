@@ -8,6 +8,7 @@
  */
 (function () {
     'use strict';
+    let deadline;
 
     function $(x) {
         const elem = document.querySelectorAll(x);
@@ -17,11 +18,19 @@
     }
 
     const a = $('.countdown-timer');
+
     if (a) {
         let count = a.dataset.count;
         if (!count) count = "Отсутствует финальное значение таймера обратного отсчета";
+        else {
+            const count_array = count.split('/');
+            var y = Number(count_array[0].trim());
+            var m = Number(count_array[1].trim());
+            var d = Number(count_array[2].trim());
+        }
         let pattern = a.dataset.pattern;
         if (!pattern) pattern = "Шаблон вывода значения таймера не задан"
-        a.innerHTML = count + "    " + pattern;
+        a.innerHTML = count + "(" + y + ", " + m + ", " + d + ")    " + pattern;
     }
+    deadline = new Date(y, m, d);
 })()
