@@ -8,7 +8,9 @@
  */
 (function () {
     'use strict';
-    let deadline;
+    let deadline = null;
+    let diff = null;
+    let timerId = null;
 
     function $(x) {
         const elem = document.querySelectorAll(x);
@@ -31,6 +33,17 @@
         let pattern = a.dataset.pattern;
         if (!pattern) pattern = "Шаблон вывода значения таймера не задан"
         a.innerHTML = count + "(" + y + ", " + m + ", " + d + ")    " + pattern;
+        deadline = new Date(y, m, d);
     }
-    deadline = new Date(y, m, d);
+
+    function countdownTimer() {
+        diff = deadline - new Date();
+        a.innerHTML = diff;
+        if (diff <= 0) {
+            // останавливаем таймер timerId
+            clearInterval(timerId);
+        }
+    }
+
+    timerId = setInterval(countdownTimer, 1000);
 })()
