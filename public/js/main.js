@@ -11,7 +11,7 @@
     let y = null;
     let m = null;
     let d = null;
-    let deadline = null;
+    let deadline;
     let diff = null;
     let timerId = null;
     let pattern = "";
@@ -26,24 +26,15 @@
     const a = $('.countdown-timer');
 
     if (a) {
-        let count = a.dataset.count;
-        if (!count) count = "Отсутствует финальное значение таймера обратного отсчета";
-        else {
-            /**
-             * На данном этапе предположительно формирование искомой даты в формате YYYY/MM/DD
-             * планируется для облегчения работы администратора указывать относительное время,
-             * но реализация данного функционала не должна затронуть скрипт и будет менять только
-             * исходные данные в конфигурационном файле
-             */
-            const count_array = count.split('/');
-            y = Number(count_array[0].trim());
-            m = Number(count_array[1].trim());
-            d = Number(count_array[2].trim());
+        let count = a.dataset.deadline;
+        deadline = new Date(Date.parse(count));
+        if (isNaN(deadline)){
+            console.log("Ой Ой Ой!!! Неверный формат даты дедлайна!" + deadline );
+            deadline = new Date(0);
         }
         pattern = a.dataset.pattern;
         if (!pattern) pattern = "Шаблон вывода значения таймера не задан"
         a.innerHTML = count + "(" + y + ", " + m + ", " + d + ")    " + pattern;
-        deadline = new Date(y, m, d);
         console.log("Сработала функция (основное тело)" + a)
     }
 
@@ -56,11 +47,13 @@
      */
     function generate_a_result_string(diff = 0, pattern = "") {
         let result_string;
-        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+        const weeks = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24 / 7) : 0;
+        const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) % 7 : 0;
         const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
         const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
         const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
         result_string = pattern
+            .replace('%w', weeks.toString())
             .replace('%d', days.toString())
             .replace('%H', hours.toString())
             .replace('%M', minutes.toString())
@@ -69,7 +62,7 @@
     }
 
     function countdownTimer() {
-        diff = deadline - new Date();
+        diff = deadline - Date.now();
         a.innerHTML = generate_a_result_string(diff, pattern);
         if (diff <= 0) {
             clearInterval(timerId);

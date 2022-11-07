@@ -46,8 +46,9 @@ $app = new Stub();
             <BR><BR>
             <h1>We Build Simple REST</h1>
             <h2><?php echo $app->get('base_note', 'SimpleStub / We Build') . $app->version() ?></h2>
-            <div id = "countdown" class="countdown-timer" data-count="2022/11/30"
-                 data-pattern="до старта сайта <BR> %w недель %d дней <br> %H:%M:%S"></div>
+            <div id="countdown" class="countdown-timer"
+                 data-deadline="<?php echo $app->get('countdown_deadline', '2025/12/30') ?>"
+                 data-pattern="<?php echo $app->get('countdown_pattern', '%w w %d d %H:%M:%S') ?>"></div>
         </div>
     </section><!-- End Base Stub section -->
 </div>
