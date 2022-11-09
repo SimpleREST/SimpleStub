@@ -1,8 +1,13 @@
 # SimpleStub
 
-A simple stub for the site    
-[![ru](https://img.shields.io/badge/lang-ru-green.svg)](https://github.com/simplerest/simplestub/blob/master/README.ru.md)
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/simplerest/simplestub/blob/master/README.en.md)
+A simple stub for the site
+
+## Installation via Package Manager
+
+## Документация
+
+- [Пользовательская документация на русском языке](./docs/README.ru.md).    
+- [User documentation in English](./docs/README.en.md).
 
 ## License
 
