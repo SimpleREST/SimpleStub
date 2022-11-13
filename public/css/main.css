@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #header .logo h1 a, #header .logo h1 a:hover {
-    color: #f1f;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 #header .contact-link a {
-    color: #ff6600;
+    color: #ffffff;
     padding-right: 10px;
     font-size: 12px;
     letter-spacing: 1px;
@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Stub Section
 --------------------------------------------------------------*/
 #stub {
     width: 100%;
@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
     /* countdown */
 }
 
-#stub .hero-container {
+#stub .stub-container {
     position: absolute;
     bottom: 0;
     top: 0;

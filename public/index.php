@@ -3,7 +3,6 @@
 use App\Stub;
 
 require __DIR__ . '/../vendor/autoload.php';
-//require_once __DIR__ .'/../boiler/Stub.php';
 $app = new Stub();
 ?>
 <!DOCTYPE html>
@@ -28,21 +27,26 @@ $app = new Stub();
 <header id="header">
     <div class="container-fluid">
         <div class="logo float-left">
-            <h1 class="text-light"><a
-                        href="index.php"><span><?php echo $app->get('base_title', 'SimpleStub') . $app->version() ?></span></a>
+            <h1 class="text-light">
+                <a href="index.php">
+                    <span>
+                        <?php echo $app->get('base_title', 'SimpleStub') . $app->version() ?>
+                    </span>
+                </a>
             </h1>
         </div>
         <div class="contact-link float-right">
             <a href="#contact" class="scrollto">Связаться с нами</a>
         </div>
     </div>
-</header><!-- End #header -->
-<nav></nav>
+</header>
+<!-- ======= End Header ======= -->
+<!--<nav></nav>-->
 <div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
     <!-- ======= Base Stub Section ======= -->
     <section id="stub"
              style="background-image: url('img/<?php echo $app->get('base_background', 'simpleplug-base-bg.jpg') ?>');">
-        <div class="hero-container">
+        <div class="stub-container">
             <BR><BR>
             <h1>We Build Simple REST</h1>
             <h2><?php echo $app->get('base_note', 'SimpleStub / We Build') . $app->version() ?></h2>
@@ -53,11 +57,6 @@ $app = new Stub();
     </section><!-- End Base Stub section -->
 </div>
 <footer></footer>
-
-<!-- Vendor JS Files -->
-
-
-<!-- Template Main JS File -->
 <script src="js/main.js"></script>
 </body>
 </html>
