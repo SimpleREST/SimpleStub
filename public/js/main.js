@@ -18,7 +18,7 @@
 
     function $(x) {
         const elem = document.querySelectorAll(x);
-        document.writeln(elem.length.toString())
+        // document.writeln(elem.length.toString())
         return elem.item(0);
 
     }
@@ -28,8 +28,8 @@
     if (a) {
         let count = a.dataset.deadline;
         deadline = new Date(Date.parse(count));
-        if (isNaN(deadline)){
-            console.log("Ой Ой Ой!!! Неверный формат даты дедлайна!" + deadline );
+        if (isNaN(deadline)) {
+            console.log("Ой Ой Ой!!! Неверный формат даты дедлайна!" + deadline);
             deadline = new Date(0);
         }
         pattern = a.dataset.pattern;
@@ -70,6 +70,23 @@
         }
         console.log("Сработала функция countdownTimer() / данные счетчика обновлены");
     }
+
+
+    $("a.scrollto").addEventListener('click', function (e) {
+        console.log("Сработала функция плавного перемещения");
+        e.preventDefault();
+        let href = this.getAttribute("href").substring(1);
+        const scrollTarget = document.getElementById(href);
+        const topOffset = document.querySelector(".scrollto").offsetHeight;
+        // const topOffset = 0; // если не нужен отступ сверху
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    });
 
     timerId = setInterval(countdownTimer, 1000);
 })()

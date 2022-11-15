@@ -36,7 +36,7 @@ $app = new Stub();
             </h1>
         </div>
         <div class="contact-link float-right">
-            <a href="#contact" class="scrollto">Связаться с нами</a>
+            <a href="#contacts" class="scrollto">Связаться с нами</a>
         </div>
     </div>
 </header>
@@ -56,6 +56,48 @@ $app = new Stub();
         </div>
     </section><!-- End Base Stub section -->
 </div>
+<main id="main">
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contacts" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Наши контакты</h2>
+            </div>
+
+            <div class="row contact-info">
+
+                <div class="col-md-4">
+                    <div class="contact-address">
+                        <i class="icofont-google-map"></i>
+                        <h3>Адрес</h3>
+                        <address>Россия, Санкт-Петербург. Проспект Энтузиастов д.30</address>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-phone">
+                        <i class="icofont-phone"></i>
+                        <h3>Телефонный номер</h3>
+                        <p><a href="tel:+79119412700">+7 (911) 941 -- --</a></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="contact-email">
+                        <i class="icofont-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@simplerest.ru">info@simplerest.ru</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Contact Us Section -->
+
+</main><!-- End #main -->
 <footer></footer>
 <script src="js/main.js"></script>
 </body>
