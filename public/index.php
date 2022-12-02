@@ -71,7 +71,7 @@ $app = new Stub();
         <div class="container">
 
             <div class="section-title">
-                <h2>Наши контакты</h2>
+                <h2><?php echo $app->get('contacts_section_title_text', 'Contacts') ?></h2>
             </div>
 
             <div class="row contact-info">
@@ -79,8 +79,8 @@ $app = new Stub();
                 <div class="col-md-4">
                     <div class="contact-address">
                         <i class="icofont-google-map"></i>
-                        <h3>Адрес</h3>
-                        <address>Россия, Санкт-Петербург. Проспект Энтузиастов д.30</address>
+                        <h3><?php echo $app->get('contacts_section_address_title_text', 'address') ?></h3>
+                        <address><?php echo $app->get('contacts_section_address_content_text', '___') ?></address>
                     </div>
                 </div>
 
@@ -104,9 +104,20 @@ $app = new Stub();
 
         </div>
     </section><!-- End Contact Us Section -->
-
 </main><!-- End #main -->
-<footer></footer>
+
+< <!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>SIMPLEREST.RU</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Powered by <a href="https://simplerest.ru/">SimpleRest</a>
+        </div>
+    </div>
+</footer><!-- End #footer -->
+
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -30,7 +30,9 @@ return [
     /**
      * Секция управления блоком отображения контактной информации заглушки
      */
-    'contact-address' => 'Россия, Санкт-Петербург. Проспект Энтузиастов д.30',
+    'contacts_section_title_text' => 'Наши контакты',
+    'contacts_section_address_title_text' => 'Адрес',
+    'contacts_section_address_content_text' => 'Россия, Санкт-Петербург. Проспект Энтузиастов д.30',
     'contact_phone_to_script' => '+79119411234',
     'contact-phone_to_display' => '+7 (911) 941 -- --',
     'contact-email_to_script' => 'info@simplerest.ru',
