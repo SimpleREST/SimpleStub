@@ -15,9 +15,17 @@ $app = new Stub();
     <meta content="<?php echo $app->get('base_description', 'SimpleStub') ?>" name="description">
     <meta content="<?php echo $app->get('base_keywords', 'SimpleStub') ?>" name="keywords">
 
+    <!-- Google Fonts -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i">
+
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="vendor/twbs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/simplerest/icofont/icofont.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="css/main.css" rel="stylesheet">
