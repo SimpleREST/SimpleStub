@@ -23,9 +23,12 @@ return [
     /**
      * Секция управления блоком основного контента заглушки
      */
-    'base_background' => 'simpleplug-base-bg.jpg',
-    'base_title' => 'Website in development',
+    'base_background' => 'simpleplug-main-bg.jpg',
+    'domain' => 'SIMPLEREST',
+    'http' => 'simplerest.ru',
+    'base_title' => 'We Build Simple REST',
     'base_note' => 'The service is under development. Soon we will open it to everyone.',
+    'contacts_link_text' => 'обратная связь',
 
     /**
      * Секция управления блоком отображения контактной информации заглушки
@@ -33,8 +36,10 @@ return [
     'contacts_section_title_text' => 'Наши контакты',
     'contacts_section_address_title_text' => 'Адрес',
     'contacts_section_address_content_text' => 'Россия, Санкт-Петербург. Проспект Энтузиастов д.30',
+    'contact_section_phone_title_text' => 'Телефонный номер',
     'contact_phone_to_script' => '+79119411234',
     'contact-phone_to_display' => '+7 (911) 941 -- --',
+    'contacts_section_email_title_text' => 'Email',
     'contact-email_to_script' => 'info@simplerest.ru',
     'contact-email_to_display' => 'info@simplerest.ru',
 
