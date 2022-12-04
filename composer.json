@@ -1,29 +1,43 @@
 {
-    "name": "simplerest/simplestub",
-    "description": "A simple stub for the site",
-    "type": "project",
-    "license": "MIT",
-    "homepage": "https://simplerest.ru",
-    "support": {
-        "issues": "https://github.com/simplerest/simplestub/issues",
-        "source": "https://github.com/simplerest/simplestub"
-    },
-    "authors": [
-        {
-            "name": "Dmitriy Veremeenko",
-            "email": "stdimensiy@yandex.ru"
-        }
+  "name": "simplerest/simplestub",
+  "description": "A simple stub for the site",
+  "type": "project",
+  "license": "MIT",
+  "homepage": "https://simplerest.ru",
+  "support": {
+    "issues": "https://github.com/simplerest/simplestub/issues",
+    "source": "https://github.com/simplerest/simplestub"
+  },
+  "authors": [
+    {
+      "name": "Dmitriy Veremeenko",
+      "email": "stdimensiy@yandex.ru"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/simplerest/simplestub"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "boiler/"
+    }
+  },
+  "require": {
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "composer install --working-dir public/"
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/simplerest/simplestub"
-        }
-    ],
-    "config": {
-        "sort-packages": true
-    },
-    "require": {},
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "pre-install-cmd": [
+      "composer install --working-dir public/"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
