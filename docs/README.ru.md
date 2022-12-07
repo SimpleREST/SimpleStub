@@ -26,7 +26,7 @@
 На текущий момент доступны следующие варианты:
 
 ```
-composer create-project simplerest/simplestub my_folder "0.0.2"
+composer create-project simplerest/simplestub my_folder "0.0.3"
 ```
 В данном случае будет создана директория содержащая все необходимые файлы для работы заглушки позволяя
 без промедления начинать создание нового проекта
