@@ -31,11 +31,11 @@
   "require": {
   },
   "scripts": {
-    "post-install-cmd": [
-      "composer install --working-dir public/"
+    "post-update-cmd": [
+      "composer install --no-autoloader --working-dir public/"
     ],
-    "pre-install-cmd": [
-      "composer install --working-dir public/"
+    "post-create-project-cmd": [
+      "composer install --no-autoloader --working-dir public/"
     ]
   },
   "minimum-stability": "dev",
