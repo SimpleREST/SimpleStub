@@ -9,5 +9,5 @@ interface Application
      *
      * @return string
      */
-    public function version();
+    public function version(): string;
 }

@@ -8,9 +8,6 @@
  */
 (function () {
     'use strict';
-    let y = null;
-    let m = null;
-    let d = null;
     let deadline;
     let diff = null;
     let timerId = null;
@@ -18,9 +15,7 @@
 
     function $(x) {
         const elem = document.querySelectorAll(x);
-        // document.writeln(elem.length.toString())
         return elem.item(0);
-
     }
 
     const a = $('.countdown-timer');
@@ -34,7 +29,7 @@
         }
         pattern = a.dataset.pattern;
         if (!pattern) pattern = "Шаблон вывода значения таймера не задан"
-        a.innerHTML = count + "(" + y + ", " + m + ", " + d + ")    " + pattern;
+        countdownTimer();
         console.log("Сработала функция (основное тело)" + a)
     }
 

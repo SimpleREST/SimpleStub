@@ -9,7 +9,7 @@ class Stub implements Application
      *
      * @var string
      */
-    const VERSION = '0.0.3';
+    const VERSION = '0.0.4';
 
     /**
      * Массив конфигурационных параметров заглушки
@@ -29,12 +29,12 @@ class Stub implements Application
      * @param mixed $default
      * @return mixed
      */
-    function get($key, $default = null)
+    function get(string $key, $default = null)
     {
         return $this->params[$key] ?: $default;
     }
 
-    public function version()
+    public function version(): string
     {
         return static::VERSION;
     }
