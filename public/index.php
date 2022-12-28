@@ -118,10 +118,11 @@ $app = new Stub();
 <footer id="footer">
     <div class="container">
         <div class="copyright">
-            &copy; Copyright <strong><span><?php echo $app->get('http', 'simplerest.ru') ?></span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span><?php echo $app->get('http', 'simplerest.ru') ?></span></strong>
+            All Rights Reserved
         </div>
         <div class="credits">
-            Powered by <a href="https://simplerest.ru/">SIMPLEREST.RU</a>
+            Powered by <a href="https://simplerest.ru/">SIMPLEREST.RU</a> v.<?php echo $app->version() ?>
         </div>
     </div>
 </footer><!-- End #footer -->
