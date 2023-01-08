@@ -9,7 +9,7 @@ A simple stub for the site
 
 ## Documentation
 
-- [Пользовательская документация на русском языке](./docs/README.ru.md).    
+- [Пользовательская документация на русском языке](./docs/README.ru.md).
 - [User documentation in English](./docs/README.en.md).
 
 ## License
