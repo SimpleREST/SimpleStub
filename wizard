@@ -10,6 +10,7 @@
 |
 */
 
+use App\Console\Kernel;
 use Stub\Framework\Main\Application;
 
 define('WIZARD_STUB_START', microtime(true));
@@ -44,6 +45,7 @@ echo " Присоединил";
 |
 */
 echo $app->version();
+$kernel = new Kernel($app);
 
 /*
 |--------------------------------------------------------------------------

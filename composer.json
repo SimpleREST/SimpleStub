@@ -25,11 +25,11 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "boiler/"
+      "App\\": "app/"
     }
   },
   "require": {
-    "simplerest/stub-framework": "^0.0.2"
+    "simplerest/stub-framework": "^0.0.3"
   },
   "scripts": {
     "post-update-cmd": [
