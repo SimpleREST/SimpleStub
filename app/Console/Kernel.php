@@ -11,22 +11,7 @@
 
 namespace App\Console;
 
-use Stub\Framework\Main\Application;
-
 class Kernel extends \Stub\Framework\Main\Console\Kernel
 {
 
-    /**
-     * @var
-     */
-    protected $app;
-
-    /**
-     * @param \Stub\Framework\Contracts\Main\Application $app
-     */
-    public function __construct(\Stub\Framework\Contracts\Main\Application $app)
-    {
-        $this->app = $app;
-        echo "Создан класс Кернел, клиентской части.";
-    }
 }
