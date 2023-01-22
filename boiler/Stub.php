@@ -9,7 +9,7 @@ class Stub implements Application
      *
      * @var string
      */
-    const VERSION = '0.0.4';
+    const VERSION = '0.0.6';
 
     /**
      * Массив конфигурационных параметров заглушки
