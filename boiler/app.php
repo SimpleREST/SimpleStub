@@ -17,7 +17,7 @@
  */
 
 $app = new Stub\Framework\Main\Application($_ENV['APP_BASE_PATH'] ?? dirname(__DIR__));
-define('STUB_APP_VERSION', '0.0.6');
+define('STUB_APP_VERSION', '0.0.7');
 
 /**
  *--------------------------------------------------------------------------
