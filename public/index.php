@@ -1,8 +1,7 @@
 <?php
 
 use App\Http\Kernel;
-use App\Stub;
-use Stub\Framework\Main\Application;
+use Stub\Framework\Contracts\Main\Application;
 
 /**
  *--------------------------------------------------------------------------
@@ -46,7 +45,7 @@ require_once __DIR__ . '/../boiler/app.php';
 
 $kernel = new Kernel($app);
 
-$response = $kernel->sayHello();
+$response = $kernel->getCurrentStub();
 $request = "Тестовый запрос";
 
-//$kernel->terminate($request, $response);
+$kernel->terminate($request, $response);
