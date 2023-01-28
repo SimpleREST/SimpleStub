@@ -21,6 +21,7 @@
     }
   ],
   "config": {
+    "optimize-autoloader": true,
     "sort-packages": true
   },
   "autoload": {
@@ -29,7 +30,7 @@
     }
   },
   "require": {
-    "simplerest/stub-framework": "^0.0.7"
+    "simplerest/stub-framework": "^0.0.9"
   },
   "scripts": {
     "post-update-cmd": [

@@ -11,6 +11,7 @@
  */
 
 use App\Console\Kernel;
+use Composer\Autoload\ClassLoader;
 use Stub\Framework\Main\Application;
 
 define('WIZARD_STUB_START', microtime(true));
@@ -28,11 +29,10 @@ define('WIZARD_STUB_START', microtime(true));
  *
  */
 
-require __DIR__ . '/vendor/autoload.php';
+/** @var ClassLoader $composer */
+$composer = require __DIR__ . '/vendor/autoload.php';
 /** @var Application $app */
 require_once __DIR__ . '/boiler/app.php';
-echo " Присоединил";
-
 
 /**
  *--------------------------------------------------------------------------
@@ -57,6 +57,6 @@ $kernel = new Kernel($app);
  * Это последнее, что должно произойти с запросом
  *
  */
-$status = "Тест 0/0/1";
+$status = "SimpleStub wizard version: app/framework". $app->version();
 echo $app->terminate();
 exit($status);
