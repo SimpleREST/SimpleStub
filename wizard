@@ -61,5 +61,4 @@ $kernel = new Kernel($app);
  *
  */
 //$status = "SimpleStub wizard version: app/framework " . $app->version();
-$app->terminate($status="");
-exit($status);
+$kernel->terminate();
