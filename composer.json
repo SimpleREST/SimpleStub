@@ -30,7 +30,7 @@
     }
   },
   "require": {
-    "simplerest/stub-framework": "^0.0.9"
+    "simplerest/stub-framework": "dev-develop"
   },
   "scripts": {
     "post-update-cmd": [
