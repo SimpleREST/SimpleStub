@@ -2,8 +2,10 @@
 
 namespace App\Http;
 
+use Stub\Framework\Main\Http\Kernel as FrameworkHttpKernel;
+
 /**
- * Ядро для HTTP приложения
+ * #Ядро HTTP приложения
  * Класс технический (промежуточный) создан для организации клиентской части и фреймворка заглушки
  * в данном классе в основном происходит наследование класса ядра http из фреймворка.
  * Доработка данного класса в части добавления методов касающихся исключительно клиентской части оставлена
@@ -11,7 +13,7 @@ namespace App\Http;
  *
  *
  */
-class Kernel extends \Stub\Framework\Main\Http\Kernel
+class Kernel extends FrameworkHttpKernel
 {
 
 }
