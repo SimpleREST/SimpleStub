@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Kernel;
+use Res\Values\Resources;
 use Stub\Framework\Contracts\Main\Application;
+use Stub\Framework\Main\Assets\BaseDefaultStubResource;
 
 /**
  *--------------------------------------------------------------------------
@@ -45,7 +47,18 @@ require_once __DIR__ . '/../boiler/app.php';
 
 $kernel = new Kernel($app);
 
-$response = $kernel->getCurrentStub();
+function getLocalResources(): BaseDefaultStubResource
+{
+    $locale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+    $stringClassName = 'Res\Values\\' . $locale . '\Resources';
+    if (class_exists($stringClassName)) {
+        return new $stringClassName ();
+    } else {
+        return new Resources();
+    }
+}
+
+$response = $kernel->getCurrentStub(getLocalResources());
 $request = "Тестовый запрос";
 
 $kernel->terminate($request, $response);
