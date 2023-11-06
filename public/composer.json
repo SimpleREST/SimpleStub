@@ -2,6 +2,7 @@
     "require": {
         "twbs/bootstrap": "4.4.1",
         "simplerest/icofont": "^1.0",
-        "components/jquery": "^3.6"
+        "components/jquery": "^3.6",
+      "ext-intl": "*"
     }
 }

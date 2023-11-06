@@ -26,11 +26,12 @@
   },
   "autoload": {
     "psr-4": {
-      "App\\": "app/"
+      "App\\": "app/",
+      "Res\\": "res/"
     }
   },
   "require": {
-    "simplerest/stub-framework": "dev-develop"
+    "simplerest/stub-framework": "v0.1.2"
   },
   "scripts": {
     "post-update-cmd": [

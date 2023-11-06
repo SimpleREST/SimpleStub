@@ -16,7 +16,7 @@
  */
 
 $app = new Stub\Framework\Main\Application($_ENV['APP_BASE_PATH'] ?? dirname(__DIR__));
-const STUB_APP_VERSION = '0.0.9';
+const STUB_APP_VERSION = '0.1.1';
 
 /**
  * Return The SimpleStub Application
