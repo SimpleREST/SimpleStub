@@ -50,7 +50,7 @@ $kernel = new Kernel($app);
 function getLocalResources(): BaseDefaultStubResource
 {
     $locale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
-    $stringClassName = 'Res\Values\\' . $locale . '\Resources';
+    $stringClassName = 'Res\Values\\' . ucfirst($locale) . '\Resources';
     if (class_exists($stringClassName)) {
         return new $stringClassName ();
     } else {
