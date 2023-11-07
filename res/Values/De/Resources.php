@@ -1,6 +1,6 @@
 <?php
 
-namespace Res\values\de;
+namespace Res\Values\De;
 
 class Resources extends \Res\Values\Resources
 {

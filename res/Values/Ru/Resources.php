@@ -1,8 +1,8 @@
 <?php
 
-namespace Res\values\ru;
+namespace Res\Values\Ru;
 
-class Resources extends \Res\values\Resources
+class Resources extends \Res\Values\Resources
 {
     public function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Res\values;
+namespace Res\Values;
 
 use Stub\Framework\Main\Assets\BaseDefaultStubResource;
 
