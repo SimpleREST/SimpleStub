@@ -49,13 +49,28 @@ $kernel = new Kernel($app);
 
 function getLocalResources(): BaseDefaultStubResource
 {
-    $locale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
-    $stringClassName = 'Res\Values\\' . ucfirst($locale) . '\Resources';
-    if (class_exists($stringClassName)) {
-        return new $stringClassName ();
+    $uriLanguage = substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1, 2);
+    if (!empty($uriLanguage) && languageResourceExist($uriLanguage)) {
+        return getLanguageResource($uriLanguage);
     } else {
-        return new Resources();
+        $locale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+        if (languageResourceExist($locale)) {
+            return getLanguageResource($locale);
+        } else {
+            return new Resources();
+        }
     }
+}
+
+function languageResourceExist(string $s): bool
+{
+    return class_exists('Res\Values\\' . ucfirst($s) . '\Resources');
+}
+
+function getLanguageResource(string $s): BaseDefaultStubResource
+{
+    $classNameString = "Res\Values\\" . ucfirst($s) . "\Resources";
+    return new $classNameString();
 }
 
 $response = $kernel->getCurrentStub(getLocalResources());
