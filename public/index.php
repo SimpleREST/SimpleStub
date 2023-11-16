@@ -1,5 +1,6 @@
 <?php
 
+use App\Config;
 use App\Http\Kernel;
 use Res\Values\Resources;
 use Stub\Framework\Contracts\Main\Application;
@@ -46,18 +47,32 @@ require __DIR__ . '/../vendor/autoload.php';
 require_once __DIR__ . '/../boiler/app.php';
 
 $kernel = new Kernel($app);
+$kernel->setConfig(new Config());
 
 function getLocalResources(): BaseDefaultStubResource
 {
-    $uriLanguage = substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1, 2);
-    if (!empty($uriLanguage) && languageResourceExist($uriLanguage)) {
-        return getLanguageResource($uriLanguage);
-    } else {
-        $locale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
-        if (languageResourceExist($locale)) {
-            return getLanguageResource($locale);
+    global $kernel;
+    if ($kernel->getConfig()::IsResourceLocaleDisabled()) {
+        if (languageResourceExist($kernel->getConfig()::getDefaultLanguage())) {
+            return getLanguageResource($kernel->getConfig()::getDefaultLanguage());
         } else {
             return new Resources();
+        }
+    } else {
+        $uriLanguage = substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1, 2);
+        if (!empty($uriLanguage) && languageResourceExist($uriLanguage)) {
+            return getLanguageResource($uriLanguage);
+        } else {
+            if ($kernel->getConfig()::IsAutomaticDetectionBrowserLanguageEnabled()) {
+                $locale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
+            } else {
+                $locale = $kernel->getConfig()::getDefaultLanguage();
+            }
+            if (languageResourceExist($locale)) {
+                return getLanguageResource($locale);
+            } else {
+                return new Resources();
+            }
         }
     }
 }
