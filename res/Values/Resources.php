@@ -14,9 +14,9 @@ class Resources extends BaseDefaultStubResource
      */
     public function __construct()
     {
-        self::$domain = "Simple Binder"; // Наименование проекта если общее для всех локализаций
-        self::$contact_email_to_display = "admin@simbin.ru"; // Адрес Электронной почты администратора домена
+        self::$domain = "New project"; // Наименование проекта если общее для всех локализаций
+        self::$contact_email_to_display = "admin@NewProject.Net"; // Адрес Электронной почты администратора домена
         self::$countdown_deadline = "2024-01-14T23:59:59+03:00";
-        self::$lang = "en";
+        self::$lang = "en"; // Локализация основного текстового ресурса
     }
 }

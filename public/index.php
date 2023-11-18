@@ -52,9 +52,10 @@ $kernel->setConfig(new Config());
 function getLocalResources(): BaseDefaultStubResource
 {
     global $kernel;
-    if ($kernel->getConfig()::IsResourceLocaleDisabled()) {
-        if (languageResourceExist($kernel->getConfig()::getDefaultLanguage())) {
-            return getLanguageResource($kernel->getConfig()::getDefaultLanguage());
+    $c = $kernel->getConfig();
+    if (!($c::isResourceLocaleEnabled())) {
+        if (languageResourceExist($c::getDefaultLanguage())) {
+            return getLanguageResource($c::getDefaultLanguage());
         } else {
             return new Resources();
         }
@@ -63,10 +64,10 @@ function getLocalResources(): BaseDefaultStubResource
         if (!empty($uriLanguage) && languageResourceExist($uriLanguage)) {
             return getLanguageResource($uriLanguage);
         } else {
-            if ($kernel->getConfig()::IsAutomaticDetectionBrowserLanguageEnabled()) {
+            if ($c::isAutomaticDetectionBrowserLanguageEnabled()) {
                 $locale = Locale::acceptFromHttp($_SERVER['HTTP_ACCEPT_LANGUAGE']);
             } else {
-                $locale = $kernel->getConfig()::getDefaultLanguage();
+                $locale = $c::getDefaultLanguage();
             }
             if (languageResourceExist($locale)) {
                 return getLanguageResource($locale);
