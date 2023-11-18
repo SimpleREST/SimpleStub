@@ -14,10 +14,10 @@ class Config extends MainConfig
             Language::EN => 'EN',
             Language::DE => 'DE'
         ]);
-        self::setDefaultLanguage();
+        self::setDefaultLanguage(Language::RU);
         self::languageSelectorOn();
-        self::resourceLocaleDisabledOn();
-        self::automaticDetectionBrowserLanguageOFF();
+        self::resourceLocaleEnable();
+        self::automaticDetectionBrowserLanguageON();
     }
 
 

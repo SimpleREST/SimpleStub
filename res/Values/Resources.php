@@ -14,10 +14,9 @@ class Resources extends BaseDefaultStubResource
      */
     public function __construct()
     {
-        // Основные параметры, значения которых следует изменить в любом случае (без учета локализации).
-        // Блок параметров, которые крайне редко меняют при локализации приложения (рекомендация, но не ограничение)
         self::$domain = "Simple Binder"; // Наименование проекта если общее для всех локализаций
-        //self::$base_title = "WE BUILD SIMPLE BINDER"; // Основное приветствие
         self::$contact_email_to_display = "admin@simbin.ru"; // Адрес Электронной почты администратора домена
+        self::$countdown_deadline = "2024-01-14T23:59:59+03:00";
+        self::$lang = "en";
     }
 }
