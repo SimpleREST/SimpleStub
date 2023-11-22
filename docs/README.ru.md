@@ -28,7 +28,7 @@
 На текущий момент доступны следующие варианты:
 
 ```
-composer create-project simplerest/simplestub my_folder "0.1.3"
+composer create-project simplerest/simplestub my_folder "0.1.4"
 ```
 
 В данном случае будет создана директория содержащая все необходимые файлы для работы
