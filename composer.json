@@ -22,7 +22,10 @@
   ],
   "config": {
     "optimize-autoloader": true,
-    "sort-packages": true
+    "sort-packages": true,
+    "platform": {
+      "php": "7.4"
+    }
   },
   "autoload": {
     "psr-4": {
@@ -31,7 +34,8 @@
     }
   },
   "require": {
-    "simplerest/stub-framework": "v0.1.4"
+    "simplerest/stub-framework": "v0.1.4",
+    "php": ">=7.4"
   },
   "scripts": {
     "post-update-cmd": [
